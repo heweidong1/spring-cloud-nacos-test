@@ -1,0 +1,18 @@
+#比application 优先级给高
+spring:
+  application:
+    name: nacos-feign  #服务名字 nacos 根据 服务名字+ip+端口区别服务 同时也是nacos默认的配置文件前缀
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:  #配置中心
+        file-extension: yml
+        server-addr: localhost:8848
+        #prefix: test 这里也可以 修改前缀
+        group: TEST_GROUP #指定分组
+        namespace: e318279f-14e6-4785-b7b7-a7a2d7286e2a #指定命名空间id
+  #开发环境
+  profiles:
+    active: dev
+#${prefix}-${spring.profiles.active}.${file-extension} 配置文件dataId命名规则

@@ -3,17 +3,3 @@ management:
     web:
       exposure:
         include: "*"
-
-spring:
-  application:
-    name: nacos-feign  #服务名字 nacos 根据 服务名字+ip+端口区别服务
-  cloud:
-    nacos:
-      discovery:
-        server-addr: localhost:8848
-#      config:
-#        file-extension: yml
-#        server-addr: localhost:8848
-#        prefix: test
-server:
-  port: 3000

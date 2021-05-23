@@ -11,6 +11,7 @@
     <modules>
         <module>nacos-client</module>
         <module>nacos-user</module>
+        <module>nacos-user1</module>
     </modules>
 
     <parent>
